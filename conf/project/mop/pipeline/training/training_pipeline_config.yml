@@ -1,0 +1,18 @@
+conda_packages:
+  - "matplotlib"
+  - "scikit-learn"
+  - "pandas"
+  - "numpy"
+pip_packages:
+  - 'azureml-defaults'
+  - 'azureml-core'
+  - 'azureml-interpret'
+  - 'lightgbm'
+  - 'azureml-mlflow'
+env_name: "mop_training_env"
+endpoint_name: 'MOP_Training'
+experiment_name: "MOP_Training"
+compute_target: "npedigitalamlc01"
+script_dir: "/Users/Dipesh.Patel/MLWirelineInitiatives/main_scripts/project/mop/pipeline/training_pipeline"
+training_script_name: "training_script.py"
+datastore: "data_source_mazcacnpedigitaldls01_ml_etl_output_data"

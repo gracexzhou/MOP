@@ -1,0 +1,36 @@
+repo_link: "https://serv_eda_jen_github:AKCp8hyt75r9yBbvMKHhBBThEeETDCLjpnbAfCn2nSJDE9Yu3W9aMXn2wpYw5KGwuM6VA8oeZ@artifactory.rogers.com/artifactory/api/pypi/eda-pypi-virtual/simple"
+etl_datastore: "data_source_mazcacnpedigitaldls01_ml_etl_output_data"
+inference_datastore: "data_source_mazcacnpedigitaldls01_ml_model_output_scores_data"
+egg_lib_path: "dbfs:/FileStore/eggs/ModemOfflineWireline_0_0_3_py3_7.egg"
+db_attached_compute: "digCompRobust"
+aml_compute_target: "npedigitalamlc01"
+
+
+env_name: "MOP_environment"
+endpoint_name: "MOP_Batch_Inference_v1"
+experiment_name: "MOP_Batch_Inference"
+model_name: "mop_random_forest_v1_2022-07-13"
+output_dir: "predictive_maintenance/predictions/"
+script_dir: "/Users/Dipesh.Patel/MLWirelineInitiatives/main_scripts/project/mop/pipeline/batch_inference_pipeline"
+etl_step_script_name: "pm_batch_etl.py"
+inference_save_step_script_name: "pm_score_save.py"
+schedule:
+  schedule_name: "Modem_Offline_Prediction_Daily_Inference"
+  start_time: "12:00"
+  frequency: "Day"
+  schedule_interval: 1
+  schedule_timezone: "EasternStandardTime"
+pypi_packages:
+  - "python-dotenv"
+  - "confuse"
+conda_packages:
+  - "matplotlib"
+  - "scikit-learn"
+  - "pandas"
+  - "numpy"
+pip_packages:
+  - 'azureml-defaults'
+  - 'azureml-core'
+  - 'azureml-interpret'
+  - 'lightgbm'
+  - 'azureml-mlflow'

@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ModemOfflineWireline
+Version: 0.0.3
+Summary: Azure ML Implementation of The Modem Offline Prediction Pipeline version 0.0.1
+Home-page: UNKNOWN
+Author: Rogers Digital DataScience
+License: UNKNOWN
+Project-URL: Bug Tracker, 
+Description: Modem Offline Predicition:
+        
+        The goal of this use case is to identify customer complaints regarding modem outages proactively by utilizing historical 
+        data and known KPI's coupled with machine learning to drive decisions and dispatch for repair.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
